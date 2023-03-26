@@ -102,7 +102,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Flex column justify-center align-center>
+  <Flex column justify-center align-center class="wrapper">
     <main>
       <Flex align-center>
         <ClockDigit :digit="Number(timeStringHHMMSS[0])" />
@@ -172,6 +172,10 @@ button.incremental {
   width: 1.5rem;
 }
 
+.wrapper {
+  height: 100%;
+}
+
 main {
   margin-left: 1.5vw;
   margin-bottom: 3rem;
@@ -189,7 +193,7 @@ main {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   bottom: calc(200px - 9vw);
   font-size: 1.5rem;
   width: 100vw;
@@ -219,11 +223,5 @@ nav {
       text-decoration: underline;
     }
   }
-}
-footer > .about-link  {
-  position: fixed;
-  bottom: 2rem;
-  text-decoration: none;
-  color: black;
 }
 </style>
