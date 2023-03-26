@@ -18,6 +18,11 @@
     width: calc(100vw / 15);
   }
 
+  @media only screen and (min-device-width: 360px) and (max-device-width: 1000px) and (orientation: landscape) {
+    height: calc(100vw / 25);
+    width: calc(100vw / 25);
+  }
+
   .dot  {
     width: 12%;
     height: 12%;

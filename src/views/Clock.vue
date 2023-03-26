@@ -203,6 +203,11 @@ nav {
     bottom: 100px
   }
 
+  @media only screen and (min-device-width: 360px) and (max-device-width: 1000px) and (orientation: landscape) {
+    bottom: 4rem;
+  }
+
+
   span {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.25);
