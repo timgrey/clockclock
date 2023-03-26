@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import clockHandPositionsReference from './constants';
 import { ref } from 'vue'
-import Flex from '@/components/flex/Flex.vue';
-import AnalogClock from '@/components/analog-clock/AnalogClock.vue';
+import Flex from '../../components/flex/Flex.vue';
+import AnalogClock from '../../components/analog-clock/AnalogClock.vue';
 
 
 defineProps({

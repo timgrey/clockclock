@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Flex from '@/components/flex/Flex.vue'
-import ClockDigit from '@/components/clock-digit/ClockDigit.vue'
-import ClockSemiColon from '@/components/clock-semi-colon/ClockSemiColon.vue'
+import Flex from '../components/flex/Flex.vue'
+import ClockDigit from '../components/clock-digit/ClockDigit.vue'
+import ClockSemiColon from '../components/clock-semi-colon/ClockSemiColon.vue'
 import { ref, onMounted, onUnmounted } from 'vue';
 import { DateTime, Duration } from 'luxon';
 
@@ -10,8 +10,8 @@ let timeStringHHMMSS = ref('000000');
 let clockView = ref('clock');
 let timer = ref(300);
 let stopwatch = ref(0);
-let clockInterval = ref(0);
 let stopwatchPaused = ref(false);
+let clockInterval = ref();
 
 
 //Methods

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Flex from '@/components/flex/Flex.vue';
+import Flex from '../../components/flex/Flex.vue';
 </script>
 
 <template>
