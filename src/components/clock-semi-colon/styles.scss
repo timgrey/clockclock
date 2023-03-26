@@ -1,0 +1,11 @@
+.semi-colon {
+  height: calc(100vw / 15);
+
+  div {
+    height: 1vw;
+    width: 1vw;
+    margin: 0 1vw;
+    border-radius: 100%;
+    background: #444;
+  }
+}

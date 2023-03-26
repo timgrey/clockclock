@@ -1,0 +1,46 @@
+.analog-clock {
+  height: calc(100vw / 25);
+  width: calc(100vw / 25);
+  background: whitesmoke;
+  border-radius: 100%;
+  border: 5px solid rgba(239, 239, 239, 0.6);
+  box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 2px;
+
+  @media (max-width: 1215px) {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    height: calc(100vw / 15);
+    width: calc(100vw / 15);
+  }
+
+  .dot  {
+    width: 12%;
+    height: 12%;
+    background: white;
+    border-radius: 100%;
+    margin: auto;
+    position: absolute;
+    top: 44%;
+    left: 44%;
+    z-index: 2;
+    box-shadow: 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .hand {
+    height: 50%;
+    width: 8%;
+    top: 0;
+    left: calc(46%);
+    position: absolute;
+    transform-origin: bottom center;
+    margin: auto;
+    background: darkgrey;
+    transition: all 1000ms ease !important;
+    border-radius: 8px;
+  }
+}
