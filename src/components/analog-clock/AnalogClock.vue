@@ -9,7 +9,7 @@ defineProps({
 const handStyles = (handPosition: number) => {
   return {
     transform: `rotate(${handPosition}deg)`,
-    background: `${[225, -135].includes(handPosition) ? 'white' : '#444'}`
+    background: `${[225, -135].includes(handPosition) ? 'white' : '#555'}`
   }
 }
 </script>
@@ -18,7 +18,7 @@ const handStyles = (handPosition: number) => {
   <div class="analog-clock">
     <div class="dot" />
     <div class="hand" :style="handStyles(Number(handPositions[0]))" />
-    <div class="hand" :style="handStyles(Number(handPositions[1]))" />
+    <div class="hand small" :style="handStyles(Number(handPositions[1]))" />
   </div>
 </template>
 

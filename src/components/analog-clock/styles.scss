@@ -44,8 +44,13 @@
     position: absolute;
     transform-origin: bottom center;
     margin: auto;
-    background: darkgrey;
-    transition: all 1000ms ease !important;
+    background: #555;
+    transition: all 900ms ease !important;
     border-radius: 8px;
+
+    &.small {
+      height: 40%;
+      top: calc(8% + 1px)
+    }
   }
 }
