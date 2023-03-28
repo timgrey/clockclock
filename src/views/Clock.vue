@@ -118,11 +118,12 @@ onUnmounted(() => {
       <Flex
         v-if="clockView === 'timer'"
         justify-center
+        align-center
         gap="1rem"
         class="clock-controls"
       >
         <button class="incremental" @click="incrementTimer()">+</button>
-        <button class="incremental" @click="decrementTimer()">-</button>
+        <button class="decremental" @click="decrementTimer()">-</button>
         <button v-if="clockInterval !== 0" @click="setTimer()">Reset</button>
         <button v-if="!clockInterval" @click="startTimer()">Start</button>
       </Flex>
@@ -130,6 +131,7 @@ onUnmounted(() => {
       <Flex
         v-if="clockView === 'stopwatch'"
         justify-center
+        align-center
         gap="1rem"
         class="clock-controls"
       >
@@ -140,7 +142,7 @@ onUnmounted(() => {
       </Flex>
     </main>
     <nav>
-      <Flex justify-space-around gap="1rem">
+      <Flex justify-space-around align-center gap="1rem">
         <span
           :class="{ active: clockView === 'clock'}"
           @click="selectView('clock')"
@@ -168,8 +170,31 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
-button.incremental {
-  width: 1.5rem;
+button {
+  width: fit-content;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid #bdbdbd;
+  color: #555;
+  cursor: pointer;
+
+  &.incremental, &.decremental {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+  }
+
+  &.incremental {
+    padding: 5px 8px 3px;
+  }
+
+  &:hover {
+    border: 1px solid #909090;
+    color: black;
+  }
 }
 
 .wrapper {

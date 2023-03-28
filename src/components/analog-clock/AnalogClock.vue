@@ -25,7 +25,7 @@ const handStyles = (handPosition: number) => {
       class="hour-mark-wrapper"
       :style="{ transform: `rotate(${hourMark * 30}deg)` }"
     >
-      <div class="hour-mark"/>
+      <div class="hour-mark" />
     </div>
   </div>
 </template>
