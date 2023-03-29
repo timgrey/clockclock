@@ -54,7 +54,7 @@ const incrementTimer = () => {
 }
 
 const decrementTimer = () => {
-  if (timer.value >= 60) {
+  if (timer.value > 60) {
     timer.value -= 60;
     timeStringHHMMSS.value = formatSeconds(timer.value);
   }
