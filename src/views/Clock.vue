@@ -214,6 +214,9 @@ main {
     position: absolute;
     width: 100%;
     bottom: -6rem;
+    @media only screen and (min-device-width: 360px) and (max-device-width: 1000px) and (orientation: landscape) {
+      bottom: 140%;
+    }
   }
 }
 
