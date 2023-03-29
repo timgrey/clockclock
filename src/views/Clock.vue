@@ -142,7 +142,7 @@ onUnmounted(() => {
       </Flex>
     </main>
     <nav>
-      <Flex justify-space-around align-center gap="1rem">
+      <Flex justify-space-around align-center gap="1vw">
         <span
           :class="{ active: clockView === 'clock'}"
           @click="selectView('clock')"
@@ -214,6 +214,7 @@ main {
     position: absolute;
     width: 100%;
     bottom: -6rem;
+
     @media only screen and (min-device-width: 360px) and (max-device-width: 1000px) and (orientation: landscape) {
       bottom: 140%;
     }
